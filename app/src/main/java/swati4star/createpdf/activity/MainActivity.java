@@ -22,6 +22,7 @@ import java.util.Objects;
 
 import swati4star.createpdf.R;
 import swati4star.createpdf.fragment.AboutUsFragment;
+import swati4star.createpdf.fragment.ExcelToPdfFragment;
 import swati4star.createpdf.fragment.ExtractImagesFragment;
 import swati4star.createpdf.fragment.HistoryFragment;
 import swati4star.createpdf.fragment.HomeFragment;
@@ -298,6 +299,9 @@ public class MainActivity extends AppCompatActivity
                 fragment = new RemovePagesFragment();
                 bundle.putString(BUNDLE_DATA, COMPRESS_PDF);
                 fragment.setArguments(bundle);
+                break;
+            case R.id.nav_excel_to_pdf:
+                fragment = new ExcelToPdfFragment();
                 break;
         }
 

@@ -32,6 +32,10 @@
             android:icon="@drawable/ic_text_format_black_24dp"
             android:title="@string/text_to_pdf"/>
         <item
+            android:id="@+id/nav_excel_to_pdf"
+            android:icon="@drawable/ic_excel_to_pdf_24dp"
+            android:title="@string/excel_to_pdf"/>
+        <item
             android:id="@+id/nav_compress_pdf"
             android:icon="@drawable/ic_compress_image"
             android:title="@string/compress_pdf"/>
