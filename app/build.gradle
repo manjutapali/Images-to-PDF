@@ -3,7 +3,7 @@ apply from: '../config/checkstyle.gradle'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    buildToolsVersion '28.0.2'
     defaultConfig {
         applicationId "swati4star.createpdf"
         vectorDrawables.useSupportLibrary = true
@@ -93,6 +93,8 @@ dependencies {
     // This mostly affects encoding, but you should test if you plan to support these versions.
     // Older versions e.g. 2.2 may also work if you need support for older Android versions.
     implementation 'com.google.zxing:core:3.0.1'
+    // reduced Apache POI jar file
+    implementation files("libs/poi.jar")
 }
 
 preBuild.dependsOn('checkstyle')
