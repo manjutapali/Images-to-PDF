@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -32,6 +33,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import swati4star.createpdf.R;
 import swati4star.createpdf.interfaces.OnItemClickListner;
+import swati4star.createpdf.model.ExcelToPDFOptions;
 import swati4star.createpdf.util.CreatePdf;
 import swati4star.createpdf.util.ExcelUtils;
 import swati4star.createpdf.util.FileUtils;
@@ -174,8 +176,7 @@ public class ExcelToPdfFragment extends Fragment implements OnItemClickListner {
         Log.e("ExcelToPDF:", "Path" + mPath);
         ExcelUtils excelUtils = new ExcelUtils();
 
-        excelUtils.createPDF(mFileSelectUri, getContext(), mPath);
-
+        excelUtils.createPDF(new ExcelToPDFOptions(mFileSelectUri, mActivity, mPath));
     }
 
     @Override
